@@ -6,11 +6,11 @@ import uo.ri.cws.application.service.vehicletype.VehicleTypeCrudService;
 
 public interface ServiceFactory {
 
-    // Manager use cases
-    VehicleTypeCrudService forVehicleTypeCrudService();
+	// Manager use cases
+	VehicleTypeCrudService forVehicleTypeCrudService();
 
-    MechanicCrudService forMechanicCrudService();
+	MechanicCrudService forMechanicCrudService();
 
-    CertificateService forCertificateService();
+	CertificateService forCertificateService();
 
 }

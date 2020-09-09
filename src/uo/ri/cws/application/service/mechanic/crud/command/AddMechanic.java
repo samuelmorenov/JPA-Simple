@@ -10,42 +10,40 @@ import uo.ri.cws.domain.Mechanic;
 
 public class AddMechanic implements Command<MechanicDto> {
 
-    private MechanicDto dto;
-    private MechanicRepository mr = Factory.repository.forMechanic();
+	private MechanicDto dto;
+	private MechanicRepository mr = Factory.repository.forMechanic();
 
-    public AddMechanic(MechanicDto mecanico) {
-	this.dto = mecanico;
-    }
+	public AddMechanic(MechanicDto mecanico) {
+		this.dto = mecanico;
+	}
 
-    /**
-     * Add a new mechanic to the system with the data specified in the dto. The id
-     * value will be ignored
-     * 
-     * @param mecanico dto
-     * @return the dto with the id filed updated to the UUID generated
-     * 
-     * @throws BusinessException if <br>
-     *                           there already exist another mechanic with the same
-     *                           dni
-     */
-    public MechanicDto execute() throws BusinessException {
-	
-	BusinessCheck.isNotNull(dto.dni);
-	BusinessCheck.isNotNull(dto.name);
-	BusinessCheck.isNotNull(dto.surname);
+	/**
+	 * Add a new mechanic to the system with the data specified in the dto. The id
+	 * value will be ignored
+	 * 
+	 * @param mecanico dto
+	 * @return the dto with the id filed updated to the UUID generated
+	 * 
+	 * @throws BusinessException if <br>
+	 *                           there already exist another mechanic with the same
+	 *                           dni
+	 */
+	public MechanicDto execute() throws BusinessException {
 
-	Mechanic m = new Mechanic(dto.dni, dto.name, dto.surname);
+		BusinessCheck.isNotNull(dto.dni);
+		BusinessCheck.isNotNull(dto.name);
+		BusinessCheck.isNotNull(dto.surname);
 
-	BusinessCheck.isFalse(mr.findByDni(dto.dni).isPresent(),
-		"There already exist another mechanic with the same dni");
+		Mechanic m = new Mechanic(dto.dni, dto.name, dto.surname);
 
-	mr.add(m);
+		BusinessCheck.isFalse(mr.findByDni(dto.dni).isPresent(),
+				"There already exist another mechanic with the same dni");
 
-	dto.id = m.getId();
+		mr.add(m);
 
-	return dto;
-    }
-    
+		dto.id = m.getId();
 
+		return dto;
+	}
 
 }

@@ -1,63 +1,13 @@
 package uo.ri.ui.util;
 
-import java.util.List;
-
 import uo.alb.util.console.Console;
-import uo.ri.cws.application.service.invoice.InvoiceDto;
-import uo.ri.cws.application.service.invoice.PaymentMeanDto;
 import uo.ri.cws.application.service.mechanic.MechanicDto;
 import uo.ri.cws.application.service.training.CertificateDto;
-import uo.ri.cws.application.service.training.CourseDto;
-import uo.ri.cws.application.service.training.EnrollmentDto;
 import uo.ri.cws.application.service.training.TrainingForMechanicRow;
 import uo.ri.cws.application.service.training.TrainingHoursRow;
 import uo.ri.cws.application.service.vehicletype.VehicleTypeDto;
-import uo.ri.cws.application.service.workorder.WorkOrderDto;
 
 public class Printer {
-
-	public static void printInvoice(InvoiceDto invoice) {
-
-		double importeConIVa = invoice.total;
-		double iva =  invoice.vat;
-		double importeSinIva = importeConIVa / (1 + iva / 100);
-
-		Console.printf("Invoice #: %d\n", 				invoice.number );
-		Console.printf("\tDate: %1$td/%1$tm/%1$tY\n", 	invoice.date);
-		Console.printf("\tTotal: %.2f �\n", 			importeSinIva);
-		Console.printf("\tTax: %.1f %% \n", 			invoice.vat );
-		Console.printf("\tTotal, tax inc.: %.2f �\n", 	invoice.total );
-		Console.printf("\tStatus: %s\n", 				invoice.status );
-	}
-
-	public static void printPaymentMeans(List<PaymentMeanDto> medios) {
-		Console.println();
-		Console.println("Available payment means");
-
-		Console.printf("\t%s \t%-8.8s \t%s \n", "Id", "Type", "Acummulated");
-		for (PaymentMeanDto medio : medios) {
-			printPaymentMean( medio );
-		}
-	}
-
-	private static void printPaymentMean(PaymentMeanDto medio) {
-		Console.printf("\t%s \t%-8.8s \t%s \n"
-				, medio.id
-				, medio.getClass().getName()  // not the best...
-				, medio.accumulated
-		);
-	}
-
-	public static void printWorkOrder(WorkOrderDto rep) {
-
-		Console.printf("\t%d \t%-40.40s \t%td/%<tm/%<tY \t%-12.12s \t%.2f\n"
-				, rep.id
-				, rep.description
-				, rep.date
-				, rep.status
-				, rep.total
-		);
-	}
 
 	public static void printMechanic(MechanicDto m) {
 

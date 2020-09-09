@@ -6,6 +6,6 @@ package uo.ri.cws.application.service.vehicletype;
  */
 public interface VehicleTypeCrudService {
 
-    // ...
+	// ...
 
 }

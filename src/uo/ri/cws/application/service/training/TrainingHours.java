@@ -16,24 +16,23 @@ import uo.ri.cws.domain.VehicleType;
  */
 public class TrainingHours {
 
-    public static int Calculate(Mechanic mechanic, VehicleType vehicleType) {
-	// Calculamos las horas que ha recibido el mecanico de ese tipo de vehiclo
-	int hoursPerVehicleType = 0;
-	for (Enrollment enrollment : mechanic.getEnrollments()) {
+	public static int Calculate(Mechanic mechanic, VehicleType vehicleType) {
+		// Calculamos las horas que ha recibido el mecanico de ese tipo de vehiclo
+		int hoursPerVehicleType = 0;
+		for (Enrollment enrollment : mechanic.getEnrollments()) {
 
-	    // Solo si se ha pasado
-	    if (enrollment.isPassed()) {
-		Course curse = enrollment.getCourse();
-		for (Dedication dedicarion : curse.getDedications()) {
-		    
-		    if(vehicleType.getId() == dedicarion.getVehicleType().getId()) {		
-			hoursPerVehicleType += curse.getHours()
-				* (dedicarion.getPercentage() * 0.01);
-		    }
+			// Solo si se ha pasado
+			if (enrollment.isPassed()) {
+				Course curse = enrollment.getCourse();
+				for (Dedication dedicarion : curse.getDedications()) {
+
+					if (vehicleType.getId() == dedicarion.getVehicleType().getId()) {
+						hoursPerVehicleType += curse.getHours() * (dedicarion.getPercentage() * 0.01);
+					}
+				}
+			}
 		}
-	    }
+		return hoursPerVehicleType;
 	}
-	return hoursPerVehicleType;
-    }
 
 }

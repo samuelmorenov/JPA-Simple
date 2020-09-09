@@ -22,40 +22,35 @@ import uo.ri.cws.domain.VehicleType;
  */
 public class GenerateCertificates implements Command<Integer> {
 
-    private MechanicRepository mechanicRepository =
-	    Factory.repository.forMechanic();
-    private VehicleTypeRepository vehicleRepository =
-	    Factory.repository.forVehicleType();
-    private CertificateRepository certificateRepository =
-	    Factory.repository.forCertificate();
+	private MechanicRepository mechanicRepository = Factory.repository.forMechanic();
+	private VehicleTypeRepository vehicleRepository = Factory.repository.forVehicleType();
+	private CertificateRepository certificateRepository = Factory.repository.forCertificate();
 
-    @Override
-    public Integer execute() {
-	int generated = 0;
+	@Override
+	public Integer execute() {
+		int generated = 0;
 
-	// Se recorren todos los mecanicos para cada tipo de vehiculo
-	for (VehicleType vehicleType : vehicleRepository.findAll()) {
-	    for (Mechanic mechanic : mechanicRepository.findAll()) {
+		// Se recorren todos los mecanicos para cada tipo de vehiculo
+		for (VehicleType vehicleType : vehicleRepository.findAll()) {
+			for (Mechanic mechanic : mechanicRepository.findAll()) {
 
-		// Si el certificado no existe
-		if (!certificateRepository.findByMechanicAndVehicleType(
-			mechanic.getId(), vehicleType.getId()).isPresent()) {
+				// Si el certificado no existe
+				if (!certificateRepository.findByMechanicAndVehicleType(mechanic.getId(), vehicleType.getId())
+						.isPresent()) {
 
-		    int trainingHours =
-			    TrainingHours.Calculate(mechanic, vehicleType);
+					int trainingHours = TrainingHours.Calculate(mechanic, vehicleType);
 
-		    // Y si el numero de horas es suficiente
-		    if (trainingHours >= vehicleType.getMinTrainingHours()) {
+					// Y si el numero de horas es suficiente
+					if (trainingHours >= vehicleType.getMinTrainingHours()) {
 
-			// Se genera el certificado
-			Certificate certificate =
-				new Certificate(mechanic, vehicleType);
-			certificateRepository.add(certificate);
-			generated++;
-		    }
+						// Se genera el certificado
+						Certificate certificate = new Certificate(mechanic, vehicleType);
+						certificateRepository.add(certificate);
+						generated++;
+					}
+				}
+			}
 		}
-	    }
+		return generated;
 	}
-	return generated;
-    }
 }

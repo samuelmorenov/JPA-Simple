@@ -9,20 +9,19 @@ import uo.ri.cws.application.service.vehicletype.VehicleTypeCrudService;
 
 public class BusinessFactory implements ServiceFactory {
 
-    @Override
-    public MechanicCrudService forMechanicCrudService() {
-	return new MechanicCrudServiceImpl();
-    }
+	@Override
+	public MechanicCrudService forMechanicCrudService() {
+		return new MechanicCrudServiceImpl();
+	}
 
+	@Override
+	public CertificateService forCertificateService() {
+		return new CertificateServiceImpl();
+	}
 
-    @Override
-    public CertificateService forCertificateService() {
-	return new CertificateServiceImpl();
-    }
-
-    @Override
-    public VehicleTypeCrudService forVehicleTypeCrudService() {
-	throw new RuntimeException("Not yet implemented");
-    }
+	@Override
+	public VehicleTypeCrudService forVehicleTypeCrudService() {
+		throw new RuntimeException("Not yet implemented");
+	}
 
 }
