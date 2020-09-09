@@ -13,6 +13,7 @@ public abstract class BaseEntity {
     private String id = UUID.randomUUID().toString();
     @Version
     private Long version;
+    
 
     public BaseEntity() {
 	super();
