@@ -29,30 +29,6 @@ public class Printer {
 			);
 	}
 
-	public static void printCourse(CourseDto c) {
-
-		Console.printf("%s\t%s %s %-35.35s %td/%<tm/%<tY %td/%<tm/%<tY %d\n"
-				, c.id
-				, c.code
-				, c.name
-				, c.description
-				, c.startDate
-				, c.endDate
-				, c.hours
-			);
-		c.percentages.forEach((id, percent) ->
-			Console.printf("\t %s %d percent\n", id, percent)
-		);
-	}
-
-	public static void printAttendingMechanic(EnrollmentDto att) {
-		Console.printf("%-30.30s\t%d\t%s\n"
-				, att.mechanic.surname + ", " + att.mechanic.name
-				, att.attendance
-				, att.passed ? "passed" : "failed"
-			);
-	}
-
 	public static void printTrainingForMechanic(TrainingForMechanicRow row) {
 
 		Console.printf("\t%-20.20s\t%d\t%d\n"

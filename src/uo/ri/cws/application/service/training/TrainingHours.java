@@ -1,8 +1,5 @@
 package uo.ri.cws.application.service.training;
 
-import uo.ri.cws.domain.Course;
-import uo.ri.cws.domain.Dedication;
-import uo.ri.cws.domain.Enrollment;
 import uo.ri.cws.domain.Mechanic;
 import uo.ri.cws.domain.VehicleType;
 
@@ -16,23 +13,31 @@ import uo.ri.cws.domain.VehicleType;
  */
 public class TrainingHours {
 
+//	public static int Calculate(Mechanic mechanic, VehicleType vehicleType) {
+//		// Calculamos las horas que ha recibido el mecanico de ese tipo de vehiclo
+//		int hoursPerVehicleType = 0;
+//		for (Enrollment enrollment : mechanic.getEnrollments()) {
+//
+//			// Solo si se ha pasado
+//			if (enrollment.isPassed()) {
+//				Course curse = enrollment.getCourse();
+//				for (Dedication dedicarion : curse.getDedications()) {
+//
+//					if (vehicleType.getId() == dedicarion.getVehicleType().getId()) {
+//						hoursPerVehicleType += curse.getHours() * (dedicarion.getPercentage() * 0.01);
+//					}
+//				}
+//			}
+//		}
+//		return hoursPerVehicleType;
+//	}
+
 	public static int Calculate(Mechanic mechanic, VehicleType vehicleType) {
-		// Calculamos las horas que ha recibido el mecanico de ese tipo de vehiclo
-		int hoursPerVehicleType = 0;
-		for (Enrollment enrollment : mechanic.getEnrollments()) {
-
-			// Solo si se ha pasado
-			if (enrollment.isPassed()) {
-				Course curse = enrollment.getCourse();
-				for (Dedication dedicarion : curse.getDedications()) {
-
-					if (vehicleType.getId() == dedicarion.getVehicleType().getId()) {
-						hoursPerVehicleType += curse.getHours() * (dedicarion.getPercentage() * 0.01);
-					}
-				}
-			}
-		}
-		return hoursPerVehicleType;
+		//TODO
+		double random_de_1_a_0 = Math.random();
+		double random_de_1_a_1000 = random_de_1_a_0 * 1000;
+		int random = (int) random_de_1_a_1000;
+		return random;
 	}
 
 }

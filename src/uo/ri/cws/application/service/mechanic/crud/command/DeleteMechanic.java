@@ -31,7 +31,6 @@ public class DeleteMechanic implements Command<Void> {
 		BusinessCheck.isTrue(om.isPresent(), "This mechanic does not exist");
 
 		Mechanic m = om.get();
-		BusinessCheck.isTrue(m.getInterventions().size() == 0, "This mechanics has interventions");
 
 		mr.remove(m);
 
