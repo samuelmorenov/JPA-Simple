@@ -6,7 +6,7 @@ import java.util.Date;
 
 import org.junit.Test;
 
-import alb.util.date.Dates;
+import uo.alb.util.date.Dates;
 import uo.ri.cws.domain.Course;
 
 public class ConstructorValidationTests {

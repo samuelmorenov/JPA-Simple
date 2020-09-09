@@ -3,7 +3,6 @@ package uo.ri.cws.application.service.training.course;
 import java.util.List;
 import java.util.Optional;
 
-import uo.ri.conf.Factory;
 import uo.ri.cws.application.service.BusinessException;
 import uo.ri.cws.application.service.training.CourseCrudService;
 import uo.ri.cws.application.service.training.CourseDto;
@@ -15,6 +14,7 @@ import uo.ri.cws.application.service.training.course.command.FindCourseById;
 import uo.ri.cws.application.service.training.course.command.UpdateCourse;
 import uo.ri.cws.application.service.vehicletype.VehicleTypeDto;
 import uo.ri.cws.application.util.command.CommandExecutor;
+import uo.ri.cws.conf.Factory;
 
 public class CourseCrudServiceImpl implements CourseCrudService {
 

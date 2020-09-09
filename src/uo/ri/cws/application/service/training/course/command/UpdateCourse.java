@@ -3,12 +3,12 @@ package uo.ri.cws.application.service.training.course.command;
 import java.util.Date;
 import java.util.Optional;
 
-import uo.ri.conf.Factory;
 import uo.ri.cws.application.repository.CourseRepository;
 import uo.ri.cws.application.service.BusinessException;
 import uo.ri.cws.application.service.training.CourseDto;
 import uo.ri.cws.application.util.BusinessCheck;
 import uo.ri.cws.application.util.command.Command;
+import uo.ri.cws.conf.Factory;
 import uo.ri.cws.domain.Course;
 
 public class UpdateCourse implements Command<Void> {

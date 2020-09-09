@@ -5,7 +5,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-import uo.ri.conf.Factory;
 import uo.ri.cws.application.repository.InvoiceRepository;
 import uo.ri.cws.application.repository.WorkOrderRepository;
 import uo.ri.cws.application.service.BusinessException;
@@ -13,6 +12,7 @@ import uo.ri.cws.application.service.invoice.InvoiceDto;
 import uo.ri.cws.application.util.BusinessCheck;
 import uo.ri.cws.application.util.DtoAssembler;
 import uo.ri.cws.application.util.command.Command;
+import uo.ri.cws.conf.Factory;
 import uo.ri.cws.domain.Invoice;
 import uo.ri.cws.domain.WorkOrder;
 

@@ -1,10 +1,10 @@
 package uo.ri.cws.application.service.training.certificate;
 
-import uo.ri.conf.Factory;
 import uo.ri.cws.application.service.BusinessException;
 import uo.ri.cws.application.service.training.CertificateService;
 import uo.ri.cws.application.service.training.certificate.command.GenerateCertificates;
 import uo.ri.cws.application.util.command.CommandExecutor;
+import uo.ri.cws.conf.Factory;
 
 public class CertificateServiceImpl implements CertificateService {
 

@@ -13,8 +13,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import alb.util.assertion.Argument;
-import alb.util.assertion.StateCheck;
+import uo.alb.util.assertion.Argument;
+import uo.alb.util.assertion.StateCheck;
 
 @Entity
 @Table(name = "TCOURSES")

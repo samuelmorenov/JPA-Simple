@@ -14,9 +14,9 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import alb.util.assertion.StateCheck;
-import alb.util.date.Dates;
-import alb.util.math.Round;
+import uo.alb.util.assertion.StateCheck;
+import uo.alb.util.date.Dates;
+import uo.alb.util.math.Round;
 
 @Entity
 @Table(name = "TINVOICES")

@@ -3,13 +3,13 @@ package uo.ri.cws.application.service.training.report.command;
 import java.util.ArrayList;
 import java.util.List;
 
-import uo.ri.conf.Factory;
 import uo.ri.cws.application.repository.MechanicRepository;
 import uo.ri.cws.application.repository.VehicleTypeRepository;
 import uo.ri.cws.application.service.BusinessException;
 import uo.ri.cws.application.service.training.TrainingHours;
 import uo.ri.cws.application.service.training.TrainingHoursRow;
 import uo.ri.cws.application.util.command.Command;
+import uo.ri.cws.conf.Factory;
 import uo.ri.cws.domain.Mechanic;
 import uo.ri.cws.domain.VehicleType;
 

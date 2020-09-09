@@ -10,13 +10,13 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import alb.util.date.Dates;
-import uo.ri.conf.Factory;
+import uo.alb.util.date.Dates;
 import uo.ri.cws.application.repository.CourseRepository;
 import uo.ri.cws.application.service.BusinessException;
 import uo.ri.cws.application.service.BusinessFactory;
 import uo.ri.cws.application.service.training.CourseCrudService;
 import uo.ri.cws.application.service.training.CourseDto;
+import uo.ri.cws.conf.Factory;
 import uo.ri.cws.domain.Course;
 import uo.ri.cws.infrastructure.persistence.jpa.executor.JpaExecutorFactory;
 import uo.ri.cws.infrastructure.persistence.jpa.repository.JpaRepositoryFactory;

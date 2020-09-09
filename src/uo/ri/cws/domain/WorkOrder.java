@@ -14,7 +14,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.UniqueConstraint;
 
-import alb.util.assertion.StateCheck;
+import uo.alb.util.assertion.StateCheck;
 
 @Entity
 @Table(name = "TWORKORDERS", uniqueConstraints = {

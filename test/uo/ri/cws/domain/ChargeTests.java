@@ -7,7 +7,7 @@ import java.util.Date;
 import org.junit.Before;
 import org.junit.Test;
 
-import alb.util.date.Dates;
+import uo.alb.util.date.Dates;
 
 public class ChargeTests {
 

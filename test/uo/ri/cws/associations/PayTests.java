@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-import alb.util.date.Dates;
+import uo.alb.util.date.Dates;
 import uo.ri.cws.domain.Associations;
 import uo.ri.cws.domain.Cash;
 import uo.ri.cws.domain.Charge;

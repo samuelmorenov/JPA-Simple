@@ -10,7 +10,7 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-import alb.util.date.Dates;
+import uo.alb.util.date.Dates;
 import uo.ri.cws.domain.Invoice.InvoiceStatus;
 import uo.ri.cws.domain.WorkOrder.WorkOrderStatus;
 

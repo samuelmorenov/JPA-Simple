@@ -7,7 +7,7 @@ import java.util.Set;
 import org.junit.Before;
 import org.junit.Test;
 
-import alb.util.date.Dates;
+import uo.alb.util.date.Dates;
 import uo.ri.cws.domain.Associations;
 import uo.ri.cws.domain.Client;
 import uo.ri.cws.domain.Intervention;

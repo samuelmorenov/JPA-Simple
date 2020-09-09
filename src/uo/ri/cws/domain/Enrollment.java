@@ -5,7 +5,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
-import alb.util.assertion.Argument;
+import uo.alb.util.assertion.Argument;
 
 @Entity
 @Table(name = "TENROLLMENTS", uniqueConstraints = {

@@ -2,7 +2,6 @@ package uo.ri.cws.application.service.workorder.assign;
 
 import java.util.List;
 
-import uo.ri.conf.Factory;
 import uo.ri.cws.application.service.BusinessException;
 import uo.ri.cws.application.service.training.CertificateDto;
 import uo.ri.cws.application.service.workorder.AssignWorkOrderService;
@@ -11,6 +10,7 @@ import uo.ri.cws.application.service.workorder.assign.command.AssignWorkOrderToM
 import uo.ri.cws.application.service.workorder.assign.command.FindCertificatesByVehicleTypeId;
 import uo.ri.cws.application.service.workorder.assign.command.FindUnfinishedWorkOrders;
 import uo.ri.cws.application.util.command.CommandExecutor;
+import uo.ri.cws.conf.Factory;
 
 public class AssignWorkOrderServiceImpl implements AssignWorkOrderService {
 

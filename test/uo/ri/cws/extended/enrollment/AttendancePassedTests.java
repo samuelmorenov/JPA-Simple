@@ -10,8 +10,8 @@ import java.util.Map;
 import org.junit.Before;
 import org.junit.Test;
 
-import alb.util.date.Dates;
-import alb.util.reflection.ReflectionUtil;
+import uo.alb.util.date.Dates;
+import uo.alb.util.reflection.ReflectionUtil;
 import uo.ri.cws.domain.Course;
 import uo.ri.cws.domain.Enrollment;
 import uo.ri.cws.domain.Mechanic;

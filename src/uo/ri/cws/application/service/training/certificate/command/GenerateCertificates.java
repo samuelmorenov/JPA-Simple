@@ -1,11 +1,11 @@
 package uo.ri.cws.application.service.training.certificate.command;
 
-import uo.ri.conf.Factory;
 import uo.ri.cws.application.repository.CertificateRepository;
 import uo.ri.cws.application.repository.MechanicRepository;
 import uo.ri.cws.application.repository.VehicleTypeRepository;
 import uo.ri.cws.application.service.training.TrainingHours;
 import uo.ri.cws.application.util.command.Command;
+import uo.ri.cws.conf.Factory;
 import uo.ri.cws.domain.Certificate;
 import uo.ri.cws.domain.Mechanic;
 import uo.ri.cws.domain.VehicleType;

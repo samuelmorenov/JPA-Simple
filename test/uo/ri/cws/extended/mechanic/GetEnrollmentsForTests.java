@@ -9,7 +9,7 @@ import java.util.Set;
 import org.junit.Before;
 import org.junit.Test;
 
-import alb.util.date.Dates;
+import uo.alb.util.date.Dates;
 import uo.ri.cws.domain.Course;
 import uo.ri.cws.domain.Enrollment;
 import uo.ri.cws.domain.Mechanic;
