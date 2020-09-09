@@ -2,28 +2,10 @@ package uo.ri.cws.application.repository;
 
 public interface RepositoryFactory {
 
-    MechanicRepository forMechanic();
+	MechanicRepository forMechanic();
 
-    WorkOrderRepository forWorkOrder();
+	CertificateRepository forCertificate(); // Added in the extension
 
-    PaymentMeanRepository forPaymentMean();
-
-    InvoiceRepository forInvoice();
-
-    ClientRepository forClient();
-
-    SparePartRepository forSparePart();
-
-    InterventionRepository forIntervention();
-
-    VehicleRepository forVehicle();
-
-    VehicleTypeRepository forVehicleType();
-
-    CertificateRepository forCertificate(); // Added in the extension
-
-    CourseRepository forCourse(); // Added in the second extension
-
-    DedicationRepository forDedication();
+	VehicleTypeRepository forVehicleType();
 
 }
