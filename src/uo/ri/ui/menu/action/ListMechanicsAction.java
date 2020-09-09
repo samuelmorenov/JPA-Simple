@@ -1,4 +1,4 @@
-package uo.ri.ui.manager.mechanic.action;
+package uo.ri.ui.menu.action;
 
 import java.util.List;
 

@@ -6,17 +6,18 @@ import uo.ri.cws.conf.Factory;
 import uo.ri.cws.infrastructure.persistence.jpa.executor.JpaExecutorFactory;
 import uo.ri.cws.infrastructure.persistence.jpa.repository.JpaRepositoryFactory;
 import uo.ri.cws.infrastructure.persistence.jpa.util.Jpa;
+import uo.ri.ui.menu.Menu;
 
-public class AdminMain {
+public class Main {
 
 	public static void main(String[] args) {
-		new AdminMain()
+		new Main()
 			.configure()
 			.run()
 			.close();
 	}
 
-	private AdminMain configure() {
+	private Main configure() {
 		Factory.service = new BusinessFactory();
 		Factory.repository = new JpaRepositoryFactory();
 		Factory.executor = new JpaExecutorFactory();
@@ -24,9 +25,9 @@ public class AdminMain {
 		return this;
 	}
 
-	private AdminMain run() {
+	private Main run() {
 		try {
-			new MainMenu().execute();
+			new Menu().execute();
 
 		} catch (RuntimeException rte) {
 			Printer.printRuntimeException(rte);
