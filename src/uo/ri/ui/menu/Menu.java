@@ -1,6 +1,6 @@
 package uo.ri.ui.menu;
 
-import uo.alb.util.menu.BaseMenu;
+import uo.ri.ui.alb.util.menu.BaseMenu;
 import uo.ri.ui.menu.action.AddMechanicAction;
 import uo.ri.ui.menu.action.DeleteMechanicAction;
 import uo.ri.ui.menu.action.ListMechanicsAction;

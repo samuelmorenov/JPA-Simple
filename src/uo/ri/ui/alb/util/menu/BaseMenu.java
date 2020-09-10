@@ -1,11 +1,11 @@
-package uo.alb.util.menu;
+package uo.ri.ui.alb.util.menu;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import uo.alb.util.menu.Action;
-import uo.alb.util.console.Console;
-import uo.alb.util.console.Printer;
+import uo.ri.ui.alb.util.console.Console;
+import uo.ri.ui.alb.util.console.Printer;
+import uo.ri.ui.alb.util.menu.Action;
 
 /**
  * Manages a menu and its options. 

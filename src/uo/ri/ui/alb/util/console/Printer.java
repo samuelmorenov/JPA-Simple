@@ -1,4 +1,4 @@
-package uo.alb.util.console;
+package uo.ri.ui.alb.util.console;
 
 import java.io.PrintStream;
 

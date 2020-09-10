@@ -1,11 +1,11 @@
 package uo.ri.ui;
 
-import uo.alb.util.console.Printer;
 import uo.ri.cws.application.service.BusinessFactory;
 import uo.ri.cws.conf.Factory;
 import uo.ri.cws.infrastructure.persistence.jpa.executor.JpaExecutorFactory;
 import uo.ri.cws.infrastructure.persistence.jpa.repository.JpaRepositoryFactory;
 import uo.ri.cws.infrastructure.persistence.jpa.util.Jpa;
+import uo.ri.ui.alb.util.console.Printer;
 import uo.ri.ui.menu.Menu;
 
 public class Main {

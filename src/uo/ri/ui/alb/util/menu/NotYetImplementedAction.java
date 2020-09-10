@@ -1,6 +1,6 @@
-package uo.alb.util.menu;
+package uo.ri.ui.alb.util.menu;
 
-import uo.alb.util.menu.Action;
+import uo.ri.ui.alb.util.menu.Action;
 
 public class NotYetImplementedAction implements Action {
 

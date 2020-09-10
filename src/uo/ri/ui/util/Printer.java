@@ -1,11 +1,11 @@
 package uo.ri.ui.util;
 
-import uo.alb.util.console.Console;
 import uo.ri.cws.application.service.mechanic.MechanicDto;
 import uo.ri.cws.application.service.training.CertificateDto;
 import uo.ri.cws.application.service.training.TrainingForMechanicRow;
 import uo.ri.cws.application.service.training.TrainingHoursRow;
 import uo.ri.cws.application.service.vehicletype.VehicleTypeDto;
+import uo.ri.ui.alb.util.console.Console;
 
 public class Printer {
 

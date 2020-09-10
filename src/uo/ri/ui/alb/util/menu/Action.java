@@ -1,4 +1,4 @@
-package uo.alb.util.menu;
+package uo.ri.ui.alb.util.menu;
 
 /**
  * It represents each menu option invoked by the user  

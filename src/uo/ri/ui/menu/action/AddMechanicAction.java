@@ -1,11 +1,11 @@
 package uo.ri.ui.menu.action;
 
-import uo.alb.util.console.Console;
-import uo.alb.util.menu.Action;
 import uo.ri.cws.application.service.BusinessException;
 import uo.ri.cws.application.service.mechanic.MechanicCrudService;
 import uo.ri.cws.application.service.mechanic.MechanicDto;
 import uo.ri.cws.conf.Factory;
+import uo.ri.ui.alb.util.console.Console;
+import uo.ri.ui.alb.util.menu.Action;
 
 public class AddMechanicAction implements Action {
 
