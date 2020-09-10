@@ -4,8 +4,4 @@ public interface RepositoryFactory {
 
 	MechanicRepository forMechanic();
 
-	CertificateRepository forCertificate(); // Added in the extension
-
-	VehicleTypeRepository forVehicleType();
-
 }
