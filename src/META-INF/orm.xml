@@ -5,88 +5,12 @@
   	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_2_0.xsd"
   	version="2.0">
 
-	<!-- Vehicle queries --> 
-	<named-query name="Vehicle.findByPlate">
-		<query>select v from Vehicle v where v.plateNumber = ?1</query>
-	</named-query>
-
-	<!-- WorkOrder queries --> 
-	<named-query name="WorkOrder.findByIds">
-		<query>select a from WorkOrder a where a.id in ?1</query>
-	</named-query>
-	
-	<named-query name="WorkOrder.SearchWorkOrder">
-		<query>select a from WorkOrder a where a.vehicle.id = ?1 and a.date = ?2</query>
-	</named-query>
-	
-	<named-query name="WorkOrder.findByPlateNumber">
-		<query>select a from WorkOrder a join Vehicle v where a.vehicle.id = v.id and v.plateNumber = ?1</query>
-	</named-query>
-	
-	<named-query name="WorkOrder.findByVehicleId">
-		<query>select a from WorkOrder a where a.vehicle.id in ?1</query>
-	</named-query>
-	
-	<named-query name="WorkOrder.findUnfinished">
-		<query>select a from WorkOrder a where a.status != uo.ri.cws.domain.WorkOrder.WorkOrderStatus.FINISHED</query>
-	</named-query>
-	
-	<!-- PaymentMean queries -->
-	<named-query name="PaymentMean.findByInvoiceId">
-		<query>
-			select m 
-			from Invoice f 
-				join f.workOrders w 
-				join w.vehicle.client c 
-				join c.paymentMeans m 
-			where f.id = ?1
-		</query>
-	</named-query>
-	
 	<!-- Mechanic queries -->
 	<named-query name="Mechanic.findByDni">
 		<query>
 			select m 
 			from Mechanic m 
 			where m.dni = ?1
-		</query>
-	</named-query>
-
-	<!-- Invoice queries -->
-	<named-query name="Invoice.findByNumber">
-		<query>select f from Invoice f where f.number = ?1</query>
-	</named-query>
-	
-	<named-query name="Invoice.getNextInvoiceNumber">
-		<query>select max(f.number) + 1 from Invoice f</query>
-	</named-query>
-	
-	<!-- Certificate queries -->
-		<named-query name="Certificate.findByVehicleTypeId">
-		<query>
-			select c 
-			from Certificate c 
-			where c.vehicleType.id = ?1
-			<!-- Added in the extension -->
-		</query>
-	</named-query>
-			<named-query name="Certificate.findByMechanicIdAndVehicleTypeId">
-		<query>
-			select c 
-			from Certificate c 
-			where c.vehicleType.id = ?2
-			and
-			c.mechanic.id = ?1
-			<!-- Added in the extension -->
-		</query>
-	</named-query>
-	
-	<!-- Course queries -->
-	<named-query name="Course.findByName">
-		<query>
-			select c 
-			from Course c 
-			where c.name = ?1
 		</query>
 	</named-query>
 
