@@ -18,23 +18,9 @@ public class PackageAccessorTests {
 	@Test
 	public void test() {
 		Class<?>[] classes = {
-			Course.class,
-			Dedication.class,
 			Mechanic.class,
-			Enrollment.class,
 			VehicleType.class,
-			Certificate.class,
-			Invoice.class,
-			WorkOrder.class,
-			Client.class,
-			Vehicle.class,
-			Intervention.class,
-			Substitution.class,
-			SparePart.class,
-			PaymentMean.class,
-			CreditCard.class,
-			Voucher.class,
-			Cash.class
+			Certificate.class
 		};
 		
 		for(Class<?> clazz : classes) {
