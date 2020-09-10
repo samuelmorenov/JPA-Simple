@@ -1,4 +1,4 @@
-package uo.ri.cws.extended.mechanic;
+package uo.ri.cws.domain;
 
 import static org.junit.Assert.assertTrue;
 
@@ -31,7 +31,6 @@ public class IsCertifiedForTests {
 	public void testCertifiedForCarNotForTruck() {
 		assertTrue( mechanic.isCertifiedFor( car ) );
 		assertTrue( ! mechanic.isCertifiedFor( truck ) );
-		
 		assertTrue( ! mechanic.isCertifiedFor( null ) );
 	}
 

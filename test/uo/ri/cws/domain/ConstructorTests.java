@@ -1,4 +1,4 @@
-package uo.ri.cws.extended.certificate;
+package uo.ri.cws.domain;
 
 import static org.junit.Assert.assertTrue;
 
